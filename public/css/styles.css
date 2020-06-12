@@ -1,0 +1,43 @@
+body{
+    color: rgb(224, 191, 113);
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 4px auto;
+    padding: 0 16px;
+    width: 60%;
+}
+footer{
+    inline-size: auto;
+    border-top:solid saddlebrown 1px;
+    padding: 10px 10px;
+    color: indianred;
+    margin-top: 70px;
+}
+header {
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 40px;
+}
+h3{
+    font-size: xx-large;
+    margin-bottom: 15px;
+}
+header a{
+    color: sienna;
+    margin: 3px 5px;
+}
+img{
+    width: 200px;
+    height: 270px;
+}
+input{
+    border: sienna 1px solid;
+    padding-inline-start: 3px;
+
+}
+button{
+    cursor: pointer;
+    border: 2px solid saddlebrown ;
+    background: sienna;
+    color: white;
+    
+}
