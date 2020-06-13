@@ -69,7 +69,8 @@ app.get('/about' , (req ,res)=>{
 })
 
 
-app.get('https://dhanshri-weather-app.herokuapp.com/weather',(req,res)=>{
+app.get('/weather',(req,res)=>{
+//app.get('https://dhanshri-weather-app.herokuapp.com/weather',(req,res)=>{
     if(!req.query.address){
         return res.send({
             err:'Must provide a address'

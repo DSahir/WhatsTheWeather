@@ -47,8 +47,8 @@ searchform.addEventListener('submit',(e)=>{
     msgOne.textContent = 'Loading..'
     msgTwo.textContent = ''
 
-    //fetch('http://localhost:3000/weather?address='+location).then((response)=>{
-    fetch('https://dhanshri-weather-app.herokuapp.com/weather?address='+location).then((response)=>{
+    fetch('/weather?address='+location).then((response)=>{
+    //fetch('https://dhanshri-weather-app.herokuapp.com/weather?address='+location).then((response)=>{
         response.json().then((data)=>{
             if(data.error){
                 console.log(data.error)

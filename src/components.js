@@ -5,7 +5,7 @@ const request = require('request')
 const geocode = (address , callback )=>{
     //encodeURIComponent() helps encode special characters --mapbox understands it
     //const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ encodeURIComponent(address) +'.json?access_token='+accessToken+'&limit=1'
-   const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ encodeURIComponent(address) +'.json?access_token='+process.env.AccessTkn+'&limit=1'
+    const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ encodeURIComponent(address) +'.json?access_token='+process.env.AccessTkn+'&limit=1'
     
     request({url : url , json : true}, (error,response)=>{
         console.log(response.body)
@@ -25,9 +25,9 @@ const geocode = (address , callback )=>{
 
 const forcast = (latitude , longitude , callback) =>{
     const url = 'https://api.darksky.net/forecast/'+process.env.Darknet +'/'+latitude+','+longitude +'?units=si'
-    //const url = 'https://api.darksky.net/forecast/'+darknetkey +'/'+latitude+','+longitude +'?units=si'
+    //const url = 'https://api.darksky.net/forecast/'+ darknetkey +'/'+latitude+','+longitude +'?units=si'
      //request({url : url , json :true },(error , response )=>{
-     request({url , json :true },(error , {body} )=>{
+     request({url , json :true },(error , {body}={} )=>{
             if(error){
              callback('Unable to connect server - darknet')
          }else if(body.error){
