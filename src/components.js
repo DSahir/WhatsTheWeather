@@ -1,6 +1,6 @@
 const request = require('request')
-const accessToken = process.env.AccessTkn || require('../tokens/tokenmapbox')
-const darknetkey = process.env.Darknet  || require('../tokens/tokendarknet')
+const accessToken = process.env.AccessTkn// || require('../tokens/tokenmapbox')
+const darknetkey = process.env.Darknet//  || require('../tokens/tokendarknet')
 
 const geocode = (address , callback )=>{
     //encodeURIComponent() helps encode special characters --mapbox understands it
