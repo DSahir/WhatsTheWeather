@@ -1,7 +1,8 @@
 const request = require('request')
 const accessToken = process.env.AccessTkn// || require('../tokens/tokenmapbox')
 const darknetkey = process.env.Darknet//  || require('../tokens/tokendarknet')
-
+console.log(accessToken)
+console.log(darknetkey)
 const geocode = (address , callback )=>{
     //encodeURIComponent() helps encode special characters --mapbox understands it
     //const url = 'https://api.mapbox.com/geocoding/v5/mapbox.places/'+ encodeURIComponent(address) +'.json?'+accessToken
