@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 
 <head>
-    <link rel="stylesheet" href="./css/styles.css">
-    <script src="./js/app.js"></script>
+        <link rel="stylesheet" href="/css/styles.css"> 
+    
 </head>
 <body>
     {{>header}}
-    <img src="./img/me.jpg">
-    <p>By:- {{name}}</p>
+    <div class="container">
+        {{title}}
+        <img src="./img/me.jpg">
+        <p>By:- {{name}}</p>
+    </div>
     {{>footer}}
+    <script src="../../public/js/app.js"></script>
 </body>
 
 </html>

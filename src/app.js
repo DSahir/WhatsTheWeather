@@ -8,7 +8,7 @@ const weather = require('./components')
 // console.log(__filename)
 const app = express()
 //app.com   //app.com/help  //app.com/about
-const port = process.env.PORT || 3000   //first for heroku and latter for local 
+const port = process.env.PORT   //first for heroku and latter for local 
 
 
 //define paths for express config
@@ -30,7 +30,7 @@ app.use(express.static(publicPath))     //setup static directory to serve
 
 app.get('' , (req , res)=> {
     res.render('index',{
-        title:'WEATHER APP',
+        
         name:'Dhanshri Ahir'
     })    //directly renders from veiws by default
 })
@@ -48,7 +48,7 @@ app.get('/help' , (req,res)=>{
     //res.send('HELP PAGE!')
     res.render('helpme',{
         msg:'This is the help me dynamic page.',
-        title:'HELPME',
+        title:'Help',
         name:'Dhanshri'
     }) 
     //express detects jaon and sends stringify 
@@ -63,7 +63,7 @@ app.get('/help' , (req,res)=>{
 
 app.get('/about' , (req ,res)=>{
     res.render('about',{
-        title:'Weather app - about',
+        title:'About',
         name:'Dhanshri'
     })
 })
@@ -100,16 +100,16 @@ app.get('/weather',(req,res)=>{
 
 //query srtings in url ?key=value&
 
-app.get('/products', (req,res)=>{
-    if(!req.query.search){
-        return res.send({
-            err:'Must provide a search term'
-        })
-    }
+// app.get('/products', (req,res)=>{
+//     if(!req.query.search){
+//         return res.send({
+//             err:'Must provide a search term'
+//         })
+//     }
 
-    console.log(req.query)
-    res.send()      //can send only one send  
-})
+//     console.log(req.query)
+//     res.send()      //can send only one send  
+// })
 
 app.get('/help/*',(req,res)=>{
    res.render(('error'),{
@@ -125,5 +125,5 @@ app.get('*',(rew,res)=>{
 
 //start the server--3000 port for now
 app.listen(port , ()=> {
-    console.log('Server running..')
+    console.log('Server running...')
 })

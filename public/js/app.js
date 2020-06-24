@@ -37,6 +37,10 @@ const searchform =  document.querySelector('form')
 const search =  document.querySelector('input')
 const msgOne =  document.querySelector('#msg-1')
 const msgTwo =  document.querySelector('#msg-2')
+const boxOne =  document.querySelector('#box-1')
+const boxTwo =  document.querySelector('#box-2')
+const boxThree =  document.querySelector('#box-3')
+const boxFour =  document.querySelector('#box-4')
 
 //event listener
 searchform.addEventListener('submit',(e)=>{
@@ -58,7 +62,15 @@ searchform.addEventListener('submit',(e)=>{
                 // console.log(location)
                 // console.log(data)
                 msgOne.textContent = data.address
-                msgTwo.textContent = data.forcast
+                msgTwo.textContent = data.forcast.temp +"degC"
+                msgOne.textContent = data.address
+                msgTwo.textContent = data.forcast.temp +"degC"
+                boxOne.textContent = data.forcast.rain
+                boxTwo.textContent = data.forcast.humidity
+                boxThree.textContent =data.forcast.pressure
+                boxFour.textContent =data.forcast.windSpeed
+
+
             }
         })
     })
