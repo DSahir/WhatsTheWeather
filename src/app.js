@@ -77,7 +77,7 @@ app.get('/weather',(req,res)=>{
         })
     }
     //setting the lat,long ,location to {} empty obj
-    weather.geocode(req.query.address , (error, {latitude , longitude , location}={}) => {
+        weather.geocode(req.query.address , (error, {latitude , longitude , location}={}) => {
         if(error){
             return res.send({error})
         }
@@ -97,7 +97,23 @@ app.get('/weather',(req,res)=>{
     })
     
 })
+app.get('/weather/location' , (req,res)=>{
+    console.log(req.query.latitude )
+    console.log(req.query.longitude )
+    weather.forcast (req.query.latitude ,req.query.longitude , (error , forcastdata)=>{
+        if(error){
+            return res.send({ error})
+        }
+        //console.log(location)
+        // console.log(forcastdata)
+        res.send({
 
+            // address: forcastdata.place,
+            forcast:forcastdata,
+            
+        })
+    })
+})
 //query srtings in url ?key=value&
 
 // app.get('/products', (req,res)=>{
@@ -118,12 +134,12 @@ app.get('/help/*',(req,res)=>{
    })
 })
 //404 error -- should be at last so no other match is found
-app.get('*',(rew,res)=>{
+app.get('*',(req,res)=>{
     res.render(('error'),{title:'404',msg404:'My 404 page'})
 })
 
 
 //start the server--3000 port for now
 app.listen(port , ()=> {
-    console.log('Server running...')
+    console.log('Server running...'+port)
 })
