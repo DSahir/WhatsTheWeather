@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 
 <head>
         <link rel="stylesheet" type="html/css" href="/css/styles.css"> 
@@ -6,13 +6,19 @@
 </head>
 <body>
     {{>header}}
-    <div class="container">
-        {{title}}
+    <div class="container" id="about">
         <img src="./img/me.jpg">
-        <p>By:- {{name}}</p>
+        
+        
+        <p>
+          <font style="text-align: center; font-size:2em;">{{title}} :</font>
+          <br>  
+        This is a node project build using express framework.<br>It uses the mapbox api to get the latitude and longitude of the location to be searched.<br> The darknet api then obtains the weather information of the location.
+        <br>Various npm packages used for this project are : hbs , env-cmd , request , express , geolocator on the developer side.<br>
+        <br>The github repo of this project is: <a href="https://github.com/DSahir/WhatsTheWeather.git"> Github repo</a>    </p>
     </div>
     {{>footer}}
-    <script src="../../public/js/app.js"></script>
+    {{!-- <script src="./js/app.js"></script> --}}
 </body>
 
 </html>

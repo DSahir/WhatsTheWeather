@@ -47,7 +47,7 @@ app.get('' , (req , res)=> {
 app.get('/help' , (req,res)=>{
     //res.send('HELP PAGE!')
     res.render('helpme',{
-        msg:'This is the help me dynamic page.',
+        msg:'This is the help dynamic page.',
         title:'Help',
         name:'Dhanshri'
     }) 
@@ -135,7 +135,7 @@ app.get('/help/*',(req,res)=>{
 })
 //404 error -- should be at last so no other match is found
 app.get('*',(req,res)=>{
-    res.render(('error'),{title:'404',msg404:'My 404 page'})
+    res.render(('error'),{title:'404',msg404:'404 error ! Page not found'})
 })
 
 

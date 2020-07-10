@@ -92,11 +92,14 @@ body{
     inline-size: max-content;
 }
 footer{
+
     inline-size: auto;
-    border-top:solid saddlebrown 1px;
+    border-top:solid navy 1px;
     padding: 10px 10px;
-    color: indianred;
+    color: navy;
     margin-top: 70px;
+    position: fixed;
+    bottom: 0;
 }
 header {
     font-weight: bold;
@@ -113,6 +116,8 @@ header a{
 img{
     width: 200px;
     height: 270px;
+    margin-right: 16px;
+    vertical-align: middle;
 }
 input{
      padding-inline-start: 3px;
@@ -159,10 +164,7 @@ button:hover{
 .links :active{
     background-color: white;
 }
-.boxOut{
-    display: flex;
-    justify-content: space-around;
-}
+
 .d-none{
     display: none;
 }
@@ -210,6 +212,17 @@ form{
     margin: 0 auto 3vh auto;
     width: 60%;
 }
-/* form button{
-    width: fit-content;
-} */
+#about , #help{
+    display: flex;
+    justify-content: space-around;
+    font-size: 1rem;
+    text-align: left;
+    color: #f0f4ff;
+    background-color: #3972bc7e;
+    border-radius:10px ;
+    width: 50%;
+    padding: 6vh 3vw;
+    word-wrap: normal;
+}
+
+

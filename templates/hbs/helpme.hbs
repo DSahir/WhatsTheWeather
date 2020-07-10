@@ -1,14 +1,15 @@
-<!DOCTYPE html>
-
+<!DOCTYPE>
 
 <head>
-        <link rel="stylesheet" href="/css/styles.css"> 
-        <title ><i></i>Weather App</title>
+        <link rel="stylesheet" type="html/css" href="/css/styles.css"> 
+    
 </head>
 <body>
-    {{>header}} <!-- this will load the header partial -->
+    {{>header}}
+    <div id="help" class="container">
+            <p>{{msg}}</p>
+    </div>
 
-    <p>{{msg}}</p>
     {{>footer}}
 </body>
 

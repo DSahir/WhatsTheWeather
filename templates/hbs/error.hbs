@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+<!DOCTYPE>
 
 <head>
-        <link rel="stylesheet" href="/css/styles.css"> 
-        <title >Weather App</title>
+        <link rel="stylesheet" type="html/css" href="/css/styles.css"> 
     
 </head>
 <body>
-    {{>header}} <!-- this will load the header partial -->
-    <p>{{msg404}}</p>
- 
+    {{>header}}
+    <div class="container" id="err404">
+        <p>
+        <font style="text-align: center; font-size:2em;">{{title}} :</font>
+          <br>
+    {{msg404}}</p>
+    </div>
 </body>
 
 </html>
