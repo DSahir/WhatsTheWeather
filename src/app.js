@@ -98,8 +98,6 @@ app.get('/weather',(req,res)=>{
     
 })
 app.get('/weather/location' , (req,res)=>{
-    console.log(req.query.latitude )
-    console.log(req.query.longitude )
     weather.forcast (req.query.latitude ,req.query.longitude , (error , forcastdata)=>{
         if(error){
             return res.send({ error})
